@@ -33,9 +33,9 @@
                 default:
                     Console.WriteLine("Invalid option. Please try again.");
                     break;
-                 }
-                        if (continueRunning)
-                 {
+
+                    if (continueRunning)
+                    {
 
                         Console.WriteLine();
                         Console.WriteLine("Press any key to continue...");
@@ -43,8 +43,9 @@
                         Console.Clear();
 
 
-            }
-            
+                    }
+
+            }      
         }
     }
 }
