@@ -7,19 +7,23 @@ namespace ATM
     {
         static void Main(string[] args)
         {
-
+            // Create a customer and bank account
             var person = ("Tsoler Hayitian", "12345671-1234");
             var account = new BankAccount();
             var customer = new Customer_klass(person.Item1, decimal.Parse(person.Item2.Replace("-", "")), account);
 
-
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine($"Welcome {customer.Name} to your ATM Bank Account!");
+            Console.ResetColor();
+            Console.WriteLine("Please log in with your PIN to continue.");
+
 
             // Login with PIN
             int tries = 0;
             const int maxTries = 3;
             bool loggedIn = false;
 
+            // PIN code is "1234"
 
             while (tries < maxTries && !loggedIn)
             {
@@ -52,7 +56,9 @@ namespace ATM
             bool running = true;
             while (running)
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("\nChoose an option:");
+                Console.ResetColor();
                 Console.WriteLine("1. Deposit money");
                 Console.WriteLine("2. Withdraw money");
                 Console.WriteLine("3. Show balance");
